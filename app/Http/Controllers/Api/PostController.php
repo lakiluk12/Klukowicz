@@ -38,7 +38,8 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $people = People::create($request->all());
+        return response()->json([$people], 200);
     }
 
     /**
