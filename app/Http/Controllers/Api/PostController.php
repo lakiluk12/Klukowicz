@@ -39,7 +39,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $people = People::create($request->all());
-        return response()->json([$people], 200);
+        return response()->json([$people], 201);
     }
 
     /**
@@ -75,7 +75,7 @@ class PostController extends Controller
     {
         $post->update($request->all());
 
-        return new PostResource($post);
+        return new PostResource($post, 201);
     }
 
     /**
