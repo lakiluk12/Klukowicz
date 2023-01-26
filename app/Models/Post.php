@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    protected $fillable = [
+        'imie', 'nazwisko', 'telefon', 'ulica',
+        'miasto', 'kraj'
+    ];
+
+    protected $table = 'post';
     use HasFactory;
 }
